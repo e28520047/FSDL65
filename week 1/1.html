@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Superheros</title>
+    <style>
+        .color-button {
+            background-color: #ef2a0a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .image-button {
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-   <p>First Program</p>
-   <h3>this is the second line</h3>
+    <p>First Program</p>
+    <h3>this is the second line</h3>
+    <img id="image" src="https://cdnb.artstation.com/p/assets/images/images/019/560/475/large/joel-white-spiderman-by-joelwhiteart.jpg?1564031675" alt="Spiderman" width="400" height="300" />
+
+    <br><br> <!-- Added line breaks to separate the image and buttons -->
+
+    <button class="color-button" onclick="changeColor()">Change Color</button>
+    <button class="image-button" onclick="changeImage()">Change Image</button>
+
+    <script>
+        const colors = ['#F0E68C', '#ADD8E6', '#FFB6C1', '#90EE90'];
+        let currentColorIndex = 0;
+
+        function changeColor() {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        const images = [
+            'https://cdn.dribbble.com/userupload/14630872/file/original-5a5d01cd02316c5dbb26e4a2bfcbac39.jpg?resize=752x&vertical=center',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx-hNi47PZuT3dtEgr-7DwcAnmCkUcn_vlUw&s',
+            'https://cdna.artstation.com/p/assets/images/images/040/909/316/large/maro-valls-ironman-portrait-v5-final-artstation.jpg?1630235238',
+            'https://free-3dtextureshd.com/wp-content/uploads/2024/06/268.jpg.webp'
+        ];
+        let currentImageIndex = 0;
+
+        function changeImage() {
+            const imgElement = document.getElementById('image');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imgElement.src = images[currentImageIndex];
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Final Page </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 1.2rem; 
+            background-color: #343a40;
+        }
+
+        .navbar-nav .nav-link {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb {
+            background-color: transparent;
+            padding: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Jumbotron Styling */
+        .jumbotron {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 50px 0;
+            margin-bottom: 30px;
+        }
+
+        .jumbotron h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .jumbotron p {
+            font-size: 1.25rem;
+        }
+
+        /* Main Content Section */
+        .row {
+            margin-top: 90px;
+            margin-left: 90px;
+            margin-right: 90px;
+            margin-bottom: 90px;
+        }
+
+        .row .col-sm-4 {
+            margin-top: 30px;
+        }
+
+        .row .col-sm-4 .p-3 {
+            background-color: #f7f7f7;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Contact Form Styling */
+        .form-section {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            background: #f1f1f1;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            color: #6a11cb;
+            font-weight: bold;
+        }
+
+        .invalid-feedback {
+            font-size: 0.875rem;
+        }
+
+        /* Button Hover Effect */
+        .btn:hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Additional Button (Back to Top) */
+        .button-container {
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        /* Background Color */
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">FCRIT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Achievements</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb text-end">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Fee Payment</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+  </ol>
+</nav>
+
+<!-- Jumbotron Section -->
+<div class="jumbotron text-center">
+    <h1>Welcome to Our Contact Page</h1>
+    <p>We are here to assist you. Please fill out the form below if you need any help.</p>
+</div>
+
+<!-- Main Content Section -->
+<div class="container d-flex align-items-left min-vh-100">
+    <div class="row w-100">
+        <div class="col-sm-4">
+            <div class="p-3 border bg-light">
+                <h3>Our Services</h3>
+                <p>We offer a wide range of services including fee payment, academic counseling, and career guidance. Get in touch for any assistance.</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="p-3 border bg-light">
+                <h3>Contact Us</h3>
+                <p>If you have any queries or need assistance, please fill out the form below and we will get back to you as soon as possible.</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="p-3 border bg-light">
+                <h3>Office Hours</h3>
+                <p>Our office is open Monday to Friday from 9 AM to 6 PM. Feel free to reach out during these hours for any support.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form Section -->
+<div class="container form-section">
+    <h2>Contact Us</h2>
+    <form id="contactForm" novalidate>
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            <div class="invalid-feedback">Please Enter Your Full Name.</div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <div class="invalid-feedback">Please provide a valid email address.</div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Your message here" required></textarea>
+            <div class="invalid-feedback">Please write your message.</div>
+        </div>
+        
+        <!-- Submit and Reset Buttons -->
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </form>
+</div>
+
+<!-- Additional Button (Back to Top) -->
+<div class="container button-container">
+    <button class="btn btn-success" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Back to Top</button>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2025 FCRIT. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript for form validation -->
+<script>
+    // Form validation function
+    const form = document.getElementById('contactForm');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent form submission
+        
+        // Check if the form is valid
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+        }
+        
+        // Add 'was-validated' class to show validation feedback
+        form.classList.add('was-validated');
+    });
+</script>
+
+</body>
+</html>
